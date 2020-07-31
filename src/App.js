@@ -1,26 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends  React.Component {
+
+  constructor(props){
+    super(props)
+    this.state={
+      loading:true,
+      items:[]
+    }
+  }
+
+  render(){
+
+    return (
+      <div className="App">
+        <Header name={'Maestro Pokémon!'}></Header> 
+      </div>      
+    );
+  }
 }
+
+const Header = (props) =>  
+<header className="App-header">
+  <img className="imgPokemon" src={process.env.PUBLIC_URL + '/logoPokemon.jpg'} alt="logo" />
+  <p className="frase">
+    Solo tienes que atraparlos ya! ... Pokemón!!
+  </p>
+  <img className="iconoPokemon" src={process.env.PUBLIC_URL + '/logoPokemon.png'} alt="logo" />
+  <a 
+    className="App-link"
+    href="https://www.youtube.com/watch?v=uDIoEbbFKAY"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Vamos... quieres hacerlo."
+  >
+    ¿Quieres revivir tu infancia? ... {props.name}
+    ...Solo debes... dar Click aqui! 
+  </a>
+  </header>
+
 
 export default App;
