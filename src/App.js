@@ -7,7 +7,9 @@ class App extends  React.Component {
     super(props)
     this.state={
       loading:true,
-      items:[]
+      items:[],
+      url:'home',
+      api:''
     }
   }
 
@@ -23,7 +25,8 @@ class App extends  React.Component {
 
 const Header = (props) =>  
 <header className="App-header">
-  <img className="imgPokemon" src={process.env.PUBLIC_URL + '/logoPokemon.jpg'} alt="logo" />
+  <img className="imgPokemon" src={process.env.PUBLIC_URL + '/logoPokemonHome.png'} alt="logo" />
+  <img className="logoPokemon" src={process.env.PUBLIC_URL + '/logo.png'} alt="logo" />
   <p className="frase">
     Solo tienes que atraparlos ya! ... Pokemón!!
   </p>

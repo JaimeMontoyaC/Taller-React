@@ -1,48 +1,29 @@
 import React from 'react';
 import {Link,Route} from 'react-router-dom'
 import './Routes.css';
+import Api from '../llamadoApi/Api'
+import App from '../../App'
+import Card from '../Card'
 
 class Routes extends React.Component {
     render(){
         return (
-            <div>
+            <div className="menu">
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/"><h1>Página de Inicio</h1></Link>
                         </li>
                         <li>
-                            <Link to="/category">Api</Link>
-                        </li>
-                        <li>
-                            <Link to="/products">Url</Link>
+                            <Link to="/api"><h1>Rutas de las Api</h1></Link>
                         </li>
                     </ul>
                 </nav>
-                <Route path="/" component={Home}/>
-                <Route path="/category" component={ApiPokemon}/>
-                <Route path="/products" component={UrlsPokemon}/>
+                <Route path="/" exact component={App}/>
+                <Route path="/api" component={Api}/>
+                <Route path="/card" component={Card}/>
             </div>
         )
     }
 }
-
-const Home = () => (
-    <div>
-        <h2>Home</h2>
-    </div>
-);
-
-const ApiPokemon = () => (
-    <div>
-        <h2>ApiPokemon</h2>
-    </div>
-);
-
-const UrlsPokemon = () => (
-    <div>
-        <h2>UrlsPokemon</h2>
-    </div>
-);
-
 export default Routes

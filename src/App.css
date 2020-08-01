@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: darkslategrey;
 }
 
 .App-logo {
@@ -8,20 +9,27 @@
 }
 
 .frase{
-  color: black;
+  color: white;
   font-style: oblique;
   font-family: monospace;
-  font-size: 5vh;
+  font-size: 4vh;
 }
 
 .imgPokemon{
-  width: 110vh;
-  height: 54vh;
+  width: 36vh;
+  height: 23vh;
+  margin: 0;
+}
+
+.logoPokemon{
+  margin: 0;
+  width: 56vh;
+  height: 20vh;
 }
 
 .iconoPokemon{
-  width: 40vh;
-  height: 30vh;
+  width: 26vh;
+  height: 14vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -40,7 +48,7 @@
 }
 
 .App-link {
-  color: black;
+  color: white;
   font-style: oblique;
   font-family: monospace;
   font-size: 3vh;
